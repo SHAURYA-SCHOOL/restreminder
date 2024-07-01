@@ -1,0 +1,32 @@
+<link rel="stylesheet" href="style.css">
+<title>NOTIFICATION!</title>
+<center>
+<h1>Please take a short break.</h1>
+<div id="clock">
+	<span id="seconds"><img src="https://i.gifer.com/ZKZg.gif" width="150px" height="150px"></img></span>
+</div>
+<h2>Recommended Activities</h2>
+<h3>• Do some streching</h3>
+<h3>• Look away from the screen</h3>
+<h3>• Blink your eyes</h3>
+<p>PS: If you got this window after starting the app, please exit this window.</p>
+
+<script>
+    timeLeft = 25;
+
+function countdown() {
+	timeLeft--;
+	document.getElementById("seconds").innerHTML = String( timeLeft );
+	if (timeLeft > 0) {
+		setTimeout(countdown, 1000);
+	} else {
+		var audio = new Audio('yay.mp3');
+audio.play();
+window.close()
+		
+	}
+	
+};
+
+setTimeout(countdown, 1000);
+</script>

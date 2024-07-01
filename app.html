@@ -1,0 +1,30 @@
+<center>
+<h1>RestReminder</h1>
+<h2>Welcome to RestReminder! Please minimize this window!</h2>
+
+
+<title>RestReminder</title>
+
+<link rel="stylesheet" href="style.css">
+<script>
+    var interval = 60 * 60000
+    const delay = ms => new Promise(res => setTimeout(res, ms));
+function beep(){
+    
+const windowFeatures = "width=480,height=640";
+const handle = window.open(
+  "alarm.html",
+  "mozillaWindow",
+  windowFeatures,
+);
+if (!handle) {
+  // The window wasn't allowed to open
+  // This is likely caused by built-in popup blockers.
+  // …
+}
+
+setTimeout(beep, `${interval}`);
+}
+
+beep();
+</script>
